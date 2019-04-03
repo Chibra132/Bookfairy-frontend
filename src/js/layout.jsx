@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/functional/scrollToTop.jsx";
 
 import { Home } from "./views/home.jsx";
-import { Demo } from "./views/demo.jsx";
+import { Cart_Checkout } from "./views/Cart_Checkout.jsx";
 import { Single } from "./views/single.jsx";
-import Store from "./store/appContext.jsx";
+import { Store } from "./store/appContext.jsx";
 
 import { Navbar } from "./component/navbar.jsx";
 import { Footer } from "./component/footer.jsx";
@@ -20,7 +20,10 @@ export class Layout extends React.Component {
 						<Navbar />
 						<Switch>
 							<Route exact path="/" component={Home} />
-							<Route path="/demo" component={Demo} />
+							<Route
+								path="/cart_checkout"
+								component={Cart_Checkout}
+							/>
 							<Route path="/single/:theid" component={Single} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
