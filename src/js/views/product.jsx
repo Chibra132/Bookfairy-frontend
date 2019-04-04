@@ -14,7 +14,7 @@ export class Product extends React.Component {
 							<div className="preview col-6">
 								<div className="preview-pic tab-content">
 									<div className="tab-pane active" id="pic-1">
-										<img src="https://images-na.ssl-images-amazon.com/images/I/614QjaLuVJL._UY395_.jpg" />
+										<img src="https://images-na.ssl-images-amazon.com/images/I/51ypCAPqFuL._SX352_BO1,204,203,200_.jpg" />
 									</div>
 								</div>
 								<ul className="preview-thumbnail nav nav-tabs">
@@ -22,21 +22,21 @@ export class Product extends React.Component {
 										<a
 											data-target="#pic-1"
 											data-toggle="tab">
-											<img src="https://i.ebayimg.com/images/g/P~QAAOSwFb5aFPJU/s-l150.jpg" />
+											<img src="https://images-na.ssl-images-amazon.com/images/I/51ypCAPqFuL._AC_SX60_CR,0,0,60,60_.jpg" />
 										</a>
 									</li>
 									<li>
 										<a
 											data-target="#pic-2"
 											data-toggle="tab">
-											<img src="https://i.ebayimg.com/images/g/EW8AAOSw1NFaFPJX/s-l140.jpg" />
+											<img src="https://images-na.ssl-images-amazon.com/images/I/51zS8Rj-0rL._AC_SX60_CR,0,0,60,60_.jpg" />
 										</a>
 									</li>
 									<li>
 										<a
 											data-target="#pic-3"
 											data-toggle="tab">
-											<img src="https://i.ebayimg.com/images/g/ascAAOSwa81aFPJZ/s-l140.jpg" />
+											<img src="https://images-na.ssl-images-amazon.com/images/I/41oDNfcwAvL._AC_SX60_CR,0,0,60,60_.jpg" />
 										</a>
 									</li>
 								</ul>
