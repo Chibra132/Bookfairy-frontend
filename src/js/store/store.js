@@ -7,28 +7,38 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			cart: [
 				{
-					productName: "Dancing shoe's",
-					productDescription: "Black Diamond dancing shoes",
+					productName: "Hardcover – Box set, November ",
+					productDescription: "Game of Thrones Box set",
 					price: 180.0,
 					quanity: 1
 				},
 				{
-					productName: "Dancing shoe's",
-					productDescription: "Black Diamond dancing shoes",
+					productName: "Paperback – Box set, November ",
+					productDescription: "Game of Thrones Box set",
 					price: 180.0,
 					quanity: 1
 				}
 			],
 			product: [
 				{
-					id: 1,
-					productName: "Dancing shoe's",
-					productDescription: "Black Diamond dancing shoes",
+					productName: "Hardcover – Box set, November ",
+					productDescription: "Game of Thrones Box set",
 					price: 180
 				},
 				{
-					productName: "Dancing shoe's",
-					productDescription: "Black Diamond dancing shoes"
+					productName: "Hardcover – Box set, November ",
+					productDescription: "Game of Thrones Box set"
+				}
+			],
+			product2: [
+				{
+					productName: "Paperback – Box set, November ",
+					productDescription: "Game of Thrones Box set",
+					price: 180
+				},
+				{
+					productName: "Paperback – Box set, November ",
+					productDescription: "Game of Thrones Box set"
 				}
 			],
 			blogs: [

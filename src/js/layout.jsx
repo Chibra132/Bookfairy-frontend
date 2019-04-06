@@ -6,6 +6,7 @@ import { Home } from "./views/home.jsx";
 import { Cart_Checkout } from "./views/Cart_Checkout.jsx";
 import { Single } from "./views/single.jsx";
 import { Product } from "./views/product.jsx";
+
 import Store from "./store/appContext.jsx";
 
 import { Navbar } from "./component/navbar.jsx";
