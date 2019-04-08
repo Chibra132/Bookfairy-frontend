@@ -15,12 +15,11 @@ export class Product extends React.Component {
 	}
 
 	handleOnMouseOver(e) {}
-
 	render() {
 		return (
-			<div className="container">
+			<div className="hover">
 				<div className="card">
-					<div className="container-fliud">
+					<div className="hover__no-hover">
 						<div className="wrapper row">
 							<div className="preview col-6">
 								<div className="preview-pic tab-content">
@@ -36,7 +35,12 @@ export class Product extends React.Component {
 										<a
 											data-target="#pic-1"
 											data-toggle="tab">
-											<img src="https://images-na.ssl-images-amazon.com/images/I/51ypCAPqFuL._AC_SX60_CR,0,0,60,60_.jpg" />
+											<img
+												onMouseOver={
+													this.handleOnMouseOver
+												}
+												src="https://images-na.ssl-images-amazon.com/images/I/51ypCAPqFuL._AC_SX60_CR,0,0,60,60_.jpg"
+											/>
 										</a>
 									</li>
 									<li>
@@ -93,7 +97,7 @@ export class Product extends React.Component {
 																Buy from me{" "}
 																<i className="fas fa-shopping-cart" />{" "}
 																by{" "}
-																<a href="https://video.search.yahoo.com/search/video;_ylt=AwrC5rI66KdchUMAV937w8QF;_ylu=X3oDMTBncGdyMzQ0BHNlYwNzZWFyY2gEdnRpZAM-;_ylc=X1MDOTY3ODEzMDcEX3IDMgRhY3RuA2NsawRiY2sDOTJidjljcGU5bzJwaSUyNmIlM0QzJTI2cyUzRDNjBGNzcmNwdmlkAy45N0REREV3TGpHUkwubG1YSndMTWdlbU1UUTNMZ0FBQUFBUFFFVDMEZnIDbWNhZmVlBGZyMgNzYS1ncARncHJpZANmRjU1MnJQeFJINkhoM19ubnNhcjhBBG10ZXN0aWQDbnVsbARuX3JzbHQDNjAEbl9zdWdnAzEEb3JpZ2luA3ZpZGVvLnNlYXJjaC55YWhvby5jb20EcG9zAzAEcHFzdHIDBHBxc3RybAMEcXN0cmwDMjkEcXVlcnkDeW91dHViZSBnYW1lIG9mIHRocm9uZXMgYm9va3MEdF9zdG1wAzE1NTQ1MDk2NjEEdnRlc3RpZANudWxs?gprid=fF552rPxRH6Hh3_nnsar8A&pvid=.97DDDEwLjGRL.lmXJwLMgemMTQ3LgAAAAAPQET3&p=youtube+game+of+thrones+books&ei=UTF-8&fr2=p%3As%2Cv%3Av%2Cm%3Asa&fr=mcafee#id=1&vid=60b89f1c5cda49e943698942460af4fe&action=view">
+																<a href="https://bookfairyfrontend-marc1210.c9users.io/Cart_Checkout">
 																	Check out
 																</a>
 															</p>
