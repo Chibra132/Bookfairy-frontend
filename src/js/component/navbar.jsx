@@ -11,9 +11,9 @@ export class Navbar extends React.Component {
 					</span>
 				</Link>
 				<div className="ml-auto">
-					<Link to="/demo">
+					<Link to="/blog/1">
 						<button className="btn btn-primary">
-							Check the Context in action
+							Home to Bookfairy
 						</button>
 					</Link>
 				</div>
