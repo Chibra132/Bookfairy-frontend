@@ -22,7 +22,7 @@ export class Layout extends React.Component {
 						<Navbar />
 						<Switch>
 							<Route exact path="/" component={Home} />
-							<Route path="/blog/:theid" component={Blog} />
+							<Route path="/blog" component={Blog} />
 							<Route path="/product/:theid" component={Product} />
 
 							<Route
