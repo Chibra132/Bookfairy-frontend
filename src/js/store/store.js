@@ -7,13 +7,13 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			cart: [
 				{
-					productName: "Hardcover – Box set, November ",
+					productName: "Hardcover – Box set ",
 					productDescription: "Game of Thrones Box set",
 					price: 180.0,
 					quanity: 1
 				},
 				{
-					productName: "Paperback – Box set, November ",
+					productName: "Paperback – Box set ",
 					productDescription: "Game of Thrones Box set",
 					price: 180.0,
 					quanity: 1
@@ -21,23 +21,23 @@ const getState = ({ getStore, setStore }) => {
 			],
 			product: [
 				{
-					productName: "Hardcover – Box set, November ",
+					productName: "Hardcover – Box set ",
 					productDescription: "Game of Thrones Box set",
 					price: 180
 				},
 				{
-					productName: "Hardcover – Box set, November ",
+					productName: "Hardcover – Box set ",
 					productDescription: "Game of Thrones Box set"
 				}
 			],
 			product2: [
 				{
-					productName: "Paperback – Box set, November ",
+					productName: "Paperback – Box set ",
 					productDescription: "Game of Thrones Box set",
 					price: 180
 				},
 				{
-					productName: "Paperback – Box set, November ",
+					productName: "Paperback – Box set ",
 					productDescription: "Game of Thrones Box set"
 				}
 			],
