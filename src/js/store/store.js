@@ -12,7 +12,11 @@ const getState = ({ getStore, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			
+		blogcards: [],	
+		mainjumbo: []
+		
 		},
 		actions: {
 			changeColor: (index, color) => {
