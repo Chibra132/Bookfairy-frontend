@@ -1,9 +1,15 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/functional/scrollToTop.jsx";
+
+
+
+import { Demo } from "./views/demo.jsx";
+
 import { Blog } from "./views/blog.jsx";
 import { Home } from "./views/home.jsx";
 import { Cart_Checkout } from "./views/Cart_Checkout.jsx";
+
 import { Single } from "./views/single.jsx";
 import { Product } from "./views/product.jsx";
 import { Archive } from "./views/archive.jsx";

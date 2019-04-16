@@ -3,61 +3,65 @@ import PropTypes from "prop-types";
 import { UncontrolledCollapse, Button, CardBody, Card } from "reactstrap";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
+// import { Popover } from "react-native-modal-popover";
 
 export class Product extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			total: 0,
-			mainImage:
+			mainPic:
 				"https://images-na.ssl-images-amazon.com/images/I/51ypCAPqFuL._SX352_BO1,204,203,200_.jpg"
 		};
 	}
 
-	handleOnMouseOver(e) {}
 	render() {
 		return (
-			<div className="hover">
+			<div className="container">
 				<div className="card">
-					<div className="hover__no-hover">
-						<div className="wrapper row">
-							<div className="preview col-6">
-								<div className="preview-pic tab-content">
-									<div className="tab-pane active" id="pic-1">
-										<img
-											onMouseOver={this.handleOnMouseOver}
-											src={this.state.mainImage}
-										/>
+					<div className="container-fliud">
+						<div className="row">
+							<div className="details-col-6">
+								<div className="preview">
+									<div className="preview-pic tab-content">
+										<div
+											className="tab-pane active"
+											id="pic-1">
+											<img src={this.state.mainPic} />
+										</div>
 									</div>
+									<button
+										onClick={() =>
+											this.setState({
+												mainPic:
+													"https://images-na.ssl-images-amazon.com/images/I/51ypCAPqFuL._SX352_BO1,204,203,200_.jpg"
+											})
+										}
+									/>
+									<button
+										onClick={() =>
+											this.setState({
+												mainPic:
+													"https://images-na.ssl-images-amazon.com/images/I/51zS8Rj-0rL._SX352_BO1,204,203,200_.jpg"
+											})
+										}
+									/>
+									<button
+										onClick={() =>
+											this.setState({
+												mainPic:
+													"https://images-na.ssl-images-amazon.com/images/I/91sgJoJ43iL._SX352_BO1,204,203,200_.jpg"
+											})
+										}
+									/>
+									<button
+										onClick={() =>
+											this.setState({
+												mainPic:
+													"https://images-na.ssl-images-amazon.com/images/I/91ANAInsaSL._SX352_BO1,204,203,200_.jpg"
+											})
+										}
+									/>
 								</div>
-								<ul className="preview-thumbnail nav nav-tabs">
-									<li className="active">
-										<a
-											data-target="#pic-1"
-											data-toggle="tab">
-											<img
-												onMouseOver={
-													this.handleOnMouseOver
-												}
-												src="https://images-na.ssl-images-amazon.com/images/I/51ypCAPqFuL._AC_SX60_CR,0,0,60,60_.jpg"
-											/>
-										</a>
-									</li>
-									<li>
-										<a
-											data-target="#pic-2"
-											data-toggle="tab">
-											<img src="https://images-na.ssl-images-amazon.com/images/I/51zS8Rj-0rL._AC_SX60_CR,0,0,60,60_.jpg" />
-										</a>
-									</li>
-									<li>
-										<a
-											data-target="#pic-3"
-											data-toggle="tab">
-											<img src="https://images-na.ssl-images-amazon.com/images/I/41oDNfcwAvL._AC_SX60_CR,0,0,60,60_.jpg" />
-										</a>
-									</li>
-								</ul>
 							</div>
 
 							<Context.Consumer>
@@ -97,7 +101,7 @@ export class Product extends React.Component {
 																Buy from me{" "}
 																<i className="fas fa-shopping-cart" />{" "}
 																by{" "}
-																<a href="https://bookfairyfrontend-marc1210.c9users.io/Cart_Checkout">
+																<a href="https://www.paypal.com/us/signin">
 																	Check out
 																</a>
 															</p>
