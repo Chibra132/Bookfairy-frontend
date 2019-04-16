@@ -7,16 +7,18 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			cart: [
 				{
+					id: 0,
 					productName: "Hardcover – Box set, November ",
 					productDescription: "Game of Thrones Box set",
 					price: 180.0,
-					quanity: 1
+					quantity: 1
 				},
 				{
+					id: 1,
 					productName: "Paperback – Box set, November ",
 					productDescription: "Game of Thrones Box set",
 					price: 180.0,
-					quanity: 1
+					quantity: 1
 				}
 			],
 			product: [
@@ -31,6 +33,17 @@ const getState = ({ getStore, setStore }) => {
 				}
 			],
 			product2: [
+				{
+					productName: "Paperback – Box set, November ",
+					productDescription: "Game of Thrones Box set",
+					price: 180
+				},
+				{
+					productName: "Paperback – Box set, November ",
+					productDescription: "Game of Thrones Box set"
+				}
+			],
+			product3: [
 				{
 					productName: "Paperback – Box set, November ",
 					productDescription: "Game of Thrones Box set",
@@ -96,6 +109,12 @@ const getState = ({ getStore, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			deletecart: index => {
+				const store = getStore();
+
+				store.cart.splice(index, 1);
+				setStore({ cart: store.cart });
 			}
 		}
 	};
