@@ -7,15 +7,21 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			cart: [
 				{
+
+					id: 0,
+					productName: "Hardcover – Box set, November ",
 					productName: "Hardcover – Box set ",
 					productDescription: "Game of Thrones Box set",
 					price: 180.0,
-					quanity: 1
+					quantity: 1
 				},
 				{
-					productName: "Paperback – Box set ",
+
+					id: 1,
+					productName: "Paperback – Box set, November ",
 					productDescription: "Game of Thrones Box set",
 					price: 180.0,
+
 					quanity: 1
 				}
 			],
@@ -38,6 +44,17 @@ const getState = ({ getStore, setStore }) => {
 				},
 				{
 					productName: "Paperback – Box set ",
+					productDescription: "Game of Thrones Box set"
+				}
+			],
+			product3: [
+				{
+					productName: "Paperback – Box set, November ",
+					productDescription: "Game of Thrones Box set",
+					price: 180
+				},
+				{
+					productName: "Paperback – Box set, November ",
 					productDescription: "Game of Thrones Box set"
 				}
 			],
@@ -79,6 +96,7 @@ const getState = ({ getStore, setStore }) => {
 					// image: Boris,
 					date: "01/10/10",
 					style: " mt-3"
+
 				}
 				// ],
 				// product: [
@@ -161,6 +179,12 @@ const getState = ({ getStore, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			deletecart: index => {
+				const store = getStore();
+
+				store.cart.splice(index, 1);
+				setStore({ cart: store.cart });
 			}
 		}
 	};
