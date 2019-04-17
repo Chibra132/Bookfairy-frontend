@@ -16,10 +16,29 @@ const Store = PassedComponent => {
 			});
 		}
 
+	
+		
 		componentDidMount() {
 			// this function is the equivalent to "window.onLoad"
 			// it only run once on the entire application lifetime
 			// you should do your ajax requests here
+			
+			fetch("https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/posts/posts?per_page=4")
+				.then(response => {
+					if (response.status !== 200) {
+						alert("A rat ate our network cables again! " + response.status);
+						return;
+					}
+
+					response.json().then(data => {
+						let store = this.state.store;
+						store.blogcards = data;
+						this.setState({ store });
+					});
+				})
+				.catch(err => {
+					alert("Fetch error: ", err);
+				});
 		}
 
 		render() {
