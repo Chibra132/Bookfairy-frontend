@@ -22,7 +22,13 @@ const Store = PassedComponent => {
 			// you should do your ajax requests here
 
 			fetch(
-				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/posts"
+				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/posts",
+				{
+					headers: {
+						"Content-Type": "application/json",
+						Accept: "application/json"
+					}
+				}
 			)
 				.then(response => {
 					if (response.status !== 200) {
@@ -35,7 +41,7 @@ const Store = PassedComponent => {
 
 					response.json().then(data => {
 						let store = this.state.store;
-						store.blogcards.push(data);
+						store.blogcards = data;
 						this.setState({ store });
 					});
 				})

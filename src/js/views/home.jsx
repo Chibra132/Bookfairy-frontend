@@ -11,6 +11,8 @@ const Home = props => {
 	return (
 		<Context.Consumer>
 			{({ store, actions }) => {
+				const jumboData = store.blogcards[0];
+				const blogCardsData = store.blogcards.slice(1, 4);
 				return (
 					<div>
 						<Jumbotron fluid id="jumboHome">
@@ -25,11 +27,11 @@ const Home = props => {
 							</Container>
 						</Jumbotron>
 						{/*console.log(store);*/}
-						{store.blogcards.map(blog => {
+						{blogCardsData.map(blog => {
 							return (
 								<BlogCard
 									key={blog.ID}
-									image={blog.post_author}
+									image={blog.acf.image}
 									title={blog.post_title}
 									content={blog.post_content}
 									footer={blog.post_date}
