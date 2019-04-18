@@ -29,38 +29,63 @@ export class Product extends React.Component {
 											<img src={this.state.mainPic} />
 										</div>
 									</div>
-									<button
-										onClick={() =>
-											this.setState({
-												mainPic:
-													"https://images-na.ssl-images-amazon.com/images/I/51ypCAPqFuL._SX352_BO1,204,203,200_.jpg"
-											})
-										}
-									/>
-									<button
-										onClick={() =>
-											this.setState({
-												mainPic:
-													"https://images-na.ssl-images-amazon.com/images/I/51zS8Rj-0rL._SX352_BO1,204,203,200_.jpg"
-											})
-										}
-									/>
-									<button
-										onClick={() =>
-											this.setState({
-												mainPic:
-													"https://images-na.ssl-images-amazon.com/images/I/91sgJoJ43iL._SX352_BO1,204,203,200_.jpg"
-											})
-										}
-									/>
-									<button
-										onClick={() =>
-											this.setState({
-												mainPic:
-													"https://images-na.ssl-images-amazon.com/images/I/91ANAInsaSL._SX352_BO1,204,203,200_.jpg"
-											})
-										}
-									/>
+									<div className="d-flex">
+										<ul className="list-inline">
+											<li className="list-inline-item">
+												<button
+													onMouseOver={() =>
+														this.setState({
+															mainPic:
+																"https://images-na.ssl-images-amazon.com/images/I/51ypCAPqFuL._SX352_BO1,204,203,200_.jpg"
+														})
+													}>
+													<img src="https://images-na.ssl-images-amazon.com/images/I/91TJxJcXJ6L._AC_SX75_CR,0,0,75,75_.jpg" />
+												</button>
+											</li>
+										</ul>
+										<ul className="list-inline">
+											<li className="list-inline-item">
+												<button
+													onMouseOver={() =>
+														this.setState({
+															mainPic:
+																"https://images-na.ssl-images-amazon.com/images/I/51zS8Rj-0rL._SX352_BO1,204,203,200_.jpg"
+														})
+													}>
+													<div className="imgContainer" />
+													<img src="https://images-na.ssl-images-amazon.com/images/I/91hA29YrnKL._AC_SX75_CR,0,0,75,75_.jpg" />
+												</button>
+											</li>
+										</ul>
+										<ul className="list-inline">
+											<li className="list-inline-item">
+												<button
+													onMouseOver={() =>
+														this.setState({
+															mainPic:
+																"https://images-na.ssl-images-amazon.com/images/I/91sgJoJ43iL._SX352_BO1,204,203,200_.jpg"
+														})
+													}>
+													<div className="imgContainer" />
+													<img src="https://images-na.ssl-images-amazon.com/images/I/91sgJoJ43iL._AC_SX75_CR,0,0,75,75_.jpg" />
+												</button>
+											</li>
+										</ul>
+										<ul className="list-inline">
+											<li className="list-inline-item">
+												<button
+													onMouseOver={() =>
+														this.setState({
+															mainPic:
+																"https://images-na.ssl-images-amazon.com/images/I/91ANAInsaSL._SX352_BO1,204,203,200_.jpg"
+														})
+													}>
+													<div className="imgContainer" />
+													<img src="https://images-na.ssl-images-amazon.com/images/I/91ANAInsaSL._AC_SX75_CR,0,0,75,75_.jpg" />
+												</button>
+											</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 
