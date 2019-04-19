@@ -1,4 +1,3 @@
-import React from "react";
 import "../../styles/home.css";
 import { Jumbotron, Container } from "reactstrap";
 import HomeCarousel from "../component/Carousel.jsx";
