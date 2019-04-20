@@ -48,6 +48,7 @@ const getState = ({ getStore, setStore }) => {
 			product3: [
 				{
 
+
 					productName: "Paperback – Box set, November ",
 					productDescription: "Game of Thrones Box set",
 					price: 180
@@ -162,9 +163,10 @@ const getState = ({ getStore, setStore }) => {
 				// 		date: "01/10/10",
 				// 		style: " mt-3"
 				// 	}
-			
+			//],
 
-			
+			//blogcards: [],
+			//mainjumbo: []
 
 		},
 		actions: {
