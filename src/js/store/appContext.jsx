@@ -23,6 +23,12 @@ const Store = PassedComponent => {
 
 			fetch(
 				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/posts/posts?per_page=4"
+
+				//	headers: {
+				//	"Content-Type": "application/json",
+				//	Accept: "application/json"
+				//	}
+				//	}
 			)
 				.then(response => {
 					if (response.status !== 200) {
@@ -43,7 +49,6 @@ const Store = PassedComponent => {
 					alert("Fetch error: ", err);
 				});
 		}
-
 		render() {
 			return (
 				<Context.Provider value={this.state}>

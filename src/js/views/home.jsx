@@ -6,7 +6,6 @@ import BlogCard from "../component/BlogCards.jsx";
 import { Context } from "../store/appContext.jsx";
 
 const Home = props => {
-
 	// let post = fetch("https://assets.breatheco.de/apis/fake/posts" + this.props.params)
 	// 			.then(response => {
 	// 				if (response.status !== 200) {
@@ -24,9 +23,7 @@ const Home = props => {
 	// 				alert("Fetch error: ", err);
 	// 			});
 
-
 	// create 2 aux variables mapping into jumbotron and cards
-
 
 	return (
 		<Context.Consumer>

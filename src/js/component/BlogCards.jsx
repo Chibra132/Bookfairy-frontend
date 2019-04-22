@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react";
 import {
 	Card,
@@ -49,4 +47,3 @@ BlogCard.propTypes = {
 	footer: PropTypes.string
 };
 export default BlogCard;
->>>>>>> 2f64c0a83932aebb88e84608252cb6a7e394cab8
