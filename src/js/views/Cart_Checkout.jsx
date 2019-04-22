@@ -13,6 +13,17 @@ export class Cart_Checkout extends React.Component {
 		};
 	}
 
+	updateCart = store => {
+		let state = this.state;
+		state.total = 0;
+		for (let i = 0; i < store.cart.length; i++) {
+			state.total += store.cart[i].price * store.cart[i].quanity;
+		}
+		this.setState({
+			total: state.total
+		});
+	};
+
 	render() {
 		return (
 			<Context.Consumer>
@@ -63,7 +74,7 @@ export class Cart_Checkout extends React.Component {
 																<div className="col-xs-2">
 																	<img
 																		className="img-responsive"
-																		src="https://i.ebayimg.com/images/g/EW8AAOSw1NFaFPJX/s-l140.jpg"
+																		src="https://images-na.ssl-images-amazon.com/images/I/51ypCAPqFuL._SX352_BO1,204,203,200_.jpg"
 																	/>
 																</div>
 																<div className="col-xs-4">
@@ -97,15 +108,20 @@ export class Cart_Checkout extends React.Component {
 																	</div>
 																	<div className="col-xs-4">
 																		<input
-																			type="text"
+																			type="number"
 																			className="form-control input-sm"
-																			defaultValue={
-																				1
-																			}
+																			value={String(
+																				product.quantity
+																			)}
 																		/>
 																	</div>
 																	<div className="col-xs-2">
 																		<button
+																			onClick={() => {
+																				actions.deletecart(
+																					index
+																				);
+																			}}
 																			type="button"
 																			className="btn btn-link btn-xs">
 																			<span className="glyphicon glyphicon-trash">
@@ -128,34 +144,8 @@ export class Cart_Checkout extends React.Component {
 														<div className="col">
 															<button
 																onClick={() => {
-																	let state = this
-																		.state;
-																	var i;
-																	for (
-																		i = 0;
-																		i <
+																	this.updateCart(
 																		store
-																			.cart
-																			.length;
-																		i++
-																	) {
-																		state.total +=
-																			store
-																				.cart[
-																				i
-																			]
-																				.price *
-																			store
-																				.cart[
-																				i
-																			]
-																				.quanity;
-																	}
-																	this.setState(
-																		{
-																			total:
-																				state.total
-																		}
 																	);
 																}}
 																type="button"
@@ -170,7 +160,8 @@ export class Cart_Checkout extends React.Component {
 												<div className="row text-center">
 													<div className="col-xs-9">
 														<h4 className="text-right">
-															Total{" "}
+															Total
+															{""}
 															<strong>
 																{
 																	this.state
@@ -185,6 +176,8 @@ export class Cart_Checkout extends React.Component {
 																type="button"
 																className="btn btn-success btn-block">
 																Checkout
+																<a href="https://www.paypal.com/us/signin" />
+																<p />
 															</button>
 														</Link>
 													</div>
