@@ -4,7 +4,6 @@ import { Jumbotron, Container } from "reactstrap";
 import HomeCarousel from "../component/Carousel.jsx";
 import BlogCard from "../component/BlogCards.jsx";
 const Home = props => {
-	
 	// let post = fetch("https://assets.breatheco.de/apis/fake/posts" + this.props.params)
 	// 			.then(response => {
 	// 				if (response.status !== 200) {
@@ -21,8 +20,7 @@ const Home = props => {
 	// 			.catch(err => {
 	// 				alert("Fetch error: ", err);
 	// 			});
-	
-	
+
 	return (
 		<div>
 			<Jumbotron fluid id="jumboHome">
