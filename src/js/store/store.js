@@ -15,11 +15,24 @@ const getState = ({ getStore, setStore }) => {
 					quantity: 1
 				},
 				{
+					id: 0,
+					productName: "Hardcover – Box set ",
+					productDescription: "Game of Thrones Box set",
+					price: 180,
+					img: ""
+				},
+				{
 					id: 1,
 					productName: "Paperback – Box set, November ",
 					productDescription: "Game of Thrones Box set",
 					price: 180.0,
 					quantity: 1
+				},
+				{
+					id: 1,
+					productName: "Hardcover – Box set ",
+					productDescription: "Game of Thrones Box set",
+					img: ""
 				}
 			],
 			product: [
@@ -33,24 +46,7 @@ const getState = ({ getStore, setStore }) => {
 					productDescription: "Game of Thrones Box set"
 				}
 			],
-			product2: [
-				{
-					productName: "Paperback – Box set ",
-					productDescription: "Game of Thrones Box set",
-					price: 180
-				},
-				{
-					productName: "Paperback – Box set ",
-					productDescription: "Game of Thrones Box set"
-				}
-			],
-			product3: [
-				{
-					productName: "Paperback – Box set, November ",
-					productDescription: "Game of Thrones Box set",
-					price: 180
-				}
-			],
+
 			blogs: [
 				{
 					title: "Featured Blog",
