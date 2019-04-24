@@ -8,6 +8,23 @@ import { Card, Button, CardTitle, CardText, Row, Col } from "reactstrap";
 import MainBlog from "../views/Mainblog.jsx";
 
 const Home = props => {
+	// let post = fetch("https://assets.breatheco.de/apis/fake/posts" + this.props.params)
+	// 			.then(response => {
+	// 				if (response.status !== 200) {
+	// 					alert("Connection error, status " + response.status);
+	// 					return;
+	// 				}
+
+	// 				response.json().then(data => {
+	// 					let store = this.state.store;
+	// 					store.meetups = data;
+	// 					this.setState({ store });
+	// 				});
+	// 			})
+	// 			.catch(err => {
+	// 				alert("Fetch error: ", err);
+	// 			});
+
 	// create 2 aux variables mapping into jumbotron and cards
 
 	return (

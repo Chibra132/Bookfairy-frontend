@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/functional/scrollToTop.jsx";
-
+//import { Demo } from "./views/demo.jsx";
 import { Blog } from "./views/blog.jsx";
-import { Product } from "./views/product.jsx";
-import Home from "./views/home.jsx";
+import { Home } from "./views/home.jsx";
 import { Cart_Checkout } from "./views/Cart_Checkout.jsx";
-
+import { Single } from "./views/single.jsx";
+import { Product } from "./views/product.jsx";
+import { Archive } from "./views/archive.jsx";
 import Store from "./store/appContext.jsx";
-
 import { Navbar } from "./component/navbar.jsx";
 import { Footer } from "./component/footer.jsx";
 
@@ -24,6 +24,7 @@ export class Layout extends React.Component {
 							<Route exact path="/" component={Home} />
 							<Route path="/blog" component={Blog} />
 							<Route path="/product/:theid" component={Product} />
+							<Route path="/archive" component={Archive} />
 
 							<Route
 								path="/cart_checkout"
