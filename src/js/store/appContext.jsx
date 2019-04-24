@@ -31,13 +31,13 @@ const Store = PassedComponent => {
 				// 	}
 			)
 				.then(response => {
-					if (response.status !== 200) {
-						alert(
-							"A rat ate our network cables again! " +
-								response.status
-						);
-						return;
-					}
+					// if (response.status !== 200) {
+					// 	alert(
+					// 		"A rat ate our network cables again! " +
+					// 			response.status
+					// 	);
+					// 	return;
+					// }
 
 					response.json().then(data => {
 						let store = this.state.store;
