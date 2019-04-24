@@ -40,11 +40,10 @@ const BlogCard = props => {
 	);
 };
 
-PropTypes;
 BlogCard.propTypes = {
 	image: PropTypes.string,
 	title: PropTypes.string,
 	content: PropTypes.string,
-	footer: PropTypes.footer
+	footer: PropTypes.string
 };
 export default BlogCard;

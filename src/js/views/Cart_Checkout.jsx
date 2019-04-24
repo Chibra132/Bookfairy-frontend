@@ -124,7 +124,7 @@ export class Cart_Checkout extends React.Component {
 																					e,
 																					index
 																				);
-																				store.actions.increaseQty(
+																				actions.increaseQty(
 																					e,
 																					index
 																				);
@@ -142,7 +142,7 @@ export class Cart_Checkout extends React.Component {
 																	<div className="col-xs-2">
 																		<button
 																			onClick={() => {
-																				store.actions.deletecart(
+																				actions.deletecart(
 																					index
 																				);
 																			}}
