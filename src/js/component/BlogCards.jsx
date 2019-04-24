@@ -29,13 +29,9 @@ const BlogCard = props => {
 					/>
 					<CardBody>
 						<CardTitle>{props.title}</CardTitle>
+						<CardText>{props.content}</CardText>
 						<CardText>
-						{props.content}
-						</CardText>
-						<CardText>
-							<small className="text-muted">
-								{props.footer}
-							</small>
+							<small className="text-muted">{props.footer}</small>
 						</CardText>
 					</CardBody>
 				</Card>
@@ -46,9 +42,9 @@ const BlogCard = props => {
 
 PropTypes;
 BlogCard.propTypes = {
-	featured_media: PropTypes.string,
+	image: PropTypes.string,
 	title: PropTypes.string,
 	content: PropTypes.string,
 	footer: PropTypes.footer
-}
+};
 export default BlogCard;
