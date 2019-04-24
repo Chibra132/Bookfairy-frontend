@@ -9,7 +9,8 @@ export class Cart_Checkout extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			total: 0
+			total: 0,
+			mult: 1
 		};
 	}
 
@@ -17,17 +18,25 @@ export class Cart_Checkout extends React.Component {
 		let state = this.state;
 		state.total = 0;
 		for (let i = 0; i < store.cart.length; i++) {
-			state.total += store.cart[i].price * store.cart[i].quanity;
+			state.total += store.cart[i].price * store.cart[i].quantity;
 		}
 		this.setState({
 			total: state.total
 		});
 	};
 
+	handleChange(e, index) {
+		console.log(e.target.value);
+		console.log(typeof parseInt(e.target.value));
+		let toNum = parseInt(e.target.value);
+		this.setState({ mult: toNum });
+	}
+
 	render() {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
+					console.log(store.cart[0].price * this.mult);
 					return (
 						<div>
 							<link
@@ -97,9 +106,11 @@ export class Cart_Checkout extends React.Component {
 																	<div className="col-xs-6 text-right">
 																		<h6>
 																			<strong>
-																				{
-																					product.price
-																				}
+																				&#36;
+																				{product.price *
+																					this
+																						.state
+																						.mult}
 																				<span className="text-muted">
 																					x
 																				</span>
@@ -108,11 +119,24 @@ export class Cart_Checkout extends React.Component {
 																	</div>
 																	<div className="col-xs-4">
 																		<input
+																			onChange={e => {
+																				this.handleChange(
+																					e,
+																					index
+																				);
+																				actions.increaseQty(
+																					e,
+																					index
+																				);
+																			}}
 																			type="number"
-																			className="form-control input-sm"
-																			value={String(
+																			min="1"
+																			max="99"
+																			step="1"
+																			// className="form-control input-sm"
+																			value={
 																				product.quantity
-																			)}
+																			}
 																		/>
 																	</div>
 																	<div className="col-xs-2">
@@ -174,10 +198,9 @@ export class Cart_Checkout extends React.Component {
 														<Link to="/Thanks">
 															<button
 																type="button"
-																className="btn btn-success btn-block">
+																className="btn btn-success btn-block"
+																href="https://www.paypal.com/us/signin">
 																Checkout
-																<a href="https://www.paypal.com/us/signin" />
-																<p />
 															</button>
 														</Link>
 													</div>

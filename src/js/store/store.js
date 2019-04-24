@@ -19,8 +19,7 @@ const getState = ({ getStore, setStore }) => {
 					productName: "Paperback – Box set, November ",
 					productDescription: "Game of Thrones Box set",
 					price: 180.0,
-
-					quanity: 1
+					quantity: 1
 				}
 			],
 			product: [
@@ -50,10 +49,6 @@ const getState = ({ getStore, setStore }) => {
 					productName: "Paperback – Box set, November ",
 					productDescription: "Game of Thrones Box set",
 					price: 180
-				},
-				{
-					productName: "Paperback – Box set, November ",
-					productDescription: "Game of Thrones Box set"
 				}
 			],
 			blogs: [
@@ -114,8 +109,19 @@ const getState = ({ getStore, setStore }) => {
 			},
 			deletecart: index => {
 				const store = getStore();
-
+				let id = "";
+				let prod = store.cart.filter((item, index) => {
+					if (item.id !== id) {
+						return item;
+					}
+					setStore({ cart: prod });
+				});
 				store.cart.splice(index, 1);
+				setStore({ cart: store.cart });
+			},
+			increaseQty: (e, index) => {
+				const store = getStore();
+				store.cart[index].quantity = e.target.value;
 				setStore({ cart: store.cart });
 			}
 		}
