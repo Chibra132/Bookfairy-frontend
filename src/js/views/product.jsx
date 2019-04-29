@@ -90,120 +90,145 @@ export class Product extends React.Component {
 							</div>
 
 							<Context.Consumer>
-								{({ store }) => {
+								{({ store, actions }) => {
 									let product =
 										store.product[
 											this.props.match.params.theid
 										];
-									return (
-										<div className="details col-6">
-											<h3 className="product-title">
-												{" "}
-												{product.productName}
-											</h3>
-											<div className="rating">
-												<div className="stars">
-													<span className="fa fa-star checked" />
-													<span className="fa fa-star checked" />
-													<span className="fa fa-star checked" />
-													<span className="fa fa-star" />
-													<span className="fa fa-star" />
-												</div>
-												<div>
-													<Button
-														color="primary"
-														id="toggler"
-														style={{
-															marginBottom: "1rem"
-														}}>
-														Paperback from $37.76
-													</Button>
-													<UncontrolledCollapse toggler="#toggler">
-														<Card>
-															<img src="https://images-na.ssl-images-amazon.com/images/I/61CWamjtpTL._SY493_BO1,204,203,200_.jpg" />
 
-															<p>
-																Buy from me{" "}
-																<i className="fas fa-shopping-cart" />{" "}
-																by{" "}
-																<a href="https://www.paypal.com/us/signin">
-																	Check out
-																</a>
-															</p>
+									console.log(product);
 
-															<CardBody />
-														</Card>
-													</UncontrolledCollapse>
+									if (product == undefined) {
+										return <h1>Product Coming soon</h1>;
+									} else {
+										return (
+											<div className="details col-6">
+												<h3 className="product-title">
+													{" "}
+													{product.productName}
+												</h3>
+												<div className="rating">
+													<div className="stars">
+														<span className="fa fa-star checked" />
+														<span className="fa fa-star checked" />
+														<span className="fa fa-star checked" />
+														<span className="fa fa-star" />
+														<span className="fa fa-star" />
+													</div>
+													<div>
+														<Button
+															color="primary"
+															id="toggler"
+															style={{
+																marginBottom:
+																	"1rem"
+															}}>
+															Paperback from
+															$37.76
+														</Button>
+														<UncontrolledCollapse toggler="#toggler">
+															<Card>
+																<img src="https://images-na.ssl-images-amazon.com/images/I/61CWamjtpTL._SY493_BO1,204,203,200_.jpg" />
+
+																<p>
+																	Buy
+																	paperback{" "}
+																	<i className="fas fa-shopping-cart" />{" "}
+																	by{" "}
+																	<a href="http://bookfairyfrontend-marc1210.c9users.io:8080/Product/1">
+																		Paperback
+																	</a>
+																</p>
+
+																<CardBody />
+															</Card>
+														</UncontrolledCollapse>
+													</div>
+													<span className="review-no">
+														41 reviews
+													</span>
 												</div>
-												<span className="review-no">
-													41 reviews
-												</span>
+												<p className="product-description">
+													The George R.R. Martin Song
+													Of Ice and Fire Hardcover
+													Box Set featuring A Game of
+													Thrones, A Clash of Kings, A
+													Storm of Swords, and A Feast
+													for Crows (Amazon Exclusive)
+													(Song of Fire and Ice)
+													Hardcover – Box set,
+													November 29, 2011
+												</p>
+												<h4 className="price">
+													current price:{" "}
+													<span>$180</span>
+												</h4>
+												<p className="vote">
+													<strong>91%</strong> of
+													buyers enjoyed this product!{" "}
+													<strong>(87 votes)</strong>
+												</p>
+												<h5 className="sizes">
+													<span
+														className="size"
+														data-toggle="tooltip"
+														title=""
+													/>
+													<span
+														className="size"
+														data-toggle="tooltip"
+														title=""
+													/>
+													<span
+														className="size"
+														data-toggle="tooltip"
+														title=""
+													/>
+													<span
+														className="size"
+														data-toggle="tooltip"
+														title=""
+													/>
+												</h5>
+												<h5 className="colors">
+													<span
+														className="color orange not-available"
+														data-toggle="tooltip"
+														title="Not In store"
+													/>
+													<span className="color green" />
+													<span className="color red" />
+												</h5>
+												<div className="action">
+													<Link to="/Cart_Checkout">
+														<button
+															onClick={() => {
+																actions.addtocart(
+																	store
+																		.product[
+																		this
+																			.props
+																			.match
+																			.params
+																			.theid
+																	]
+																);
+															}}
+															className="add-to-cart btn btn-default"
+															type="button">
+															add to cart
+														</button>
+
+														<button
+															className="like btn btn-default"
+															type="button">
+															<span className="far fa-heart" />
+														</button>
+													</Link>
+												</div>
 											</div>
-											<p className="product-description">
-												The George R.R. Martin Song Of
-												Ice and Fire Hardcover Box Set
-												featuring A Game of Thrones, A
-												Clash of Kings, A Storm of
-												Swords, and A Feast for Crows
-												(Amazon Exclusive) (Song of Fire
-												and Ice) Hardcover – Box set,
-												November 29, 2011
-											</p>
-											<h4 className="price">
-												current price: <span>$180</span>
-											</h4>
-											<p className="vote">
-												<strong>91%</strong> of buyers
-												enjoyed this product!{" "}
-												<strong>(87 votes)</strong>
-											</p>
-											<h5 className="sizes">
-												<span
-													className="size"
-													data-toggle="tooltip"
-													title=""
-												/>
-												<span
-													className="size"
-													data-toggle="tooltip"
-													title=""
-												/>
-												<span
-													className="size"
-													data-toggle="tooltip"
-													title=""
-												/>
-												<span
-													className="size"
-													data-toggle="tooltip"
-													title=""
-												/>
-											</h5>
-											<h5 className="colors">
-												<span
-													className="color orange not-available"
-													data-toggle="tooltip"
-													title="Not In store"
-												/>
-												<span className="color green" />
-												<span className="color red" />
-											</h5>
-											<div className="action">
-												<Link to="/Cart_Checkout">
-													<button
-														className="add-to-cart btn btn-default"
-														type="button">
-														add to cart
-													</button>
-												</Link>
-												<button
-													className="like btn btn-default"
-													type="button">
-													<span className="far fa-heart" />
-												</button>
-											</div>
-										</div>
-									);
+										);
+									}
 								}}
 							</Context.Consumer>
 						</div>
