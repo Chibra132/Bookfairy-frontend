@@ -22,24 +22,25 @@ const Store = PassedComponent => {
 			// you should do your ajax requests here
 
 			fetch(
-				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/posts/posts?per_page=4"
-
-				// //	headers: {
-				// 	"Content-Type": "application/json",
-				// 	Accept: "application/json"
-				// 	}
-				// 	}
+				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/posts/posts?per_page=4",
+				{
+					headers: {
+						"Content-Type": "application/json",
+						Accept: "application/json"
+					}
+				}
 			)
 				.then(response => {
-					// if (response.status !== 200) {
-					// 	alert(
-					// 		"A rat ate our network cables again! " +
-					// 			response.status
-					// 	);
-					// 	return;
-					// }
+					if (response.status !== 200) {
+						alert(
+							"A rat ate our network cables again! " +
+								response.status
+						);
+						return;
+					}
 
 					response.json().then(data => {
+						console.log(data);
 						let store = this.state.store;
 						store.blogcards = data;
 						this.setState({ store });

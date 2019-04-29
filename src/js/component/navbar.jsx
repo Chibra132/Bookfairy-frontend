@@ -5,6 +5,8 @@ export class Navbar extends React.Component {
 	render() {
 		return (
 			<nav className="navbar text-light bg-info mb-3">
+				<img src="https://resizeimage.net/mypic/zH05DG6E0jLLEd5M/bdk5E/images.jpg" />
+
 				<a
 					className="navbar-brand"
 					href="https://encrypted-tbn0.gstatic.com"
@@ -21,7 +23,7 @@ export class Navbar extends React.Component {
 					</button>
 				</Link>
 
-				<Link to="/Product/1">
+				<Link to="/Product/0">
 					<button className="btn bg-secondary">Merch</button>
 				</Link>
 				<Link to="/Blog/1">

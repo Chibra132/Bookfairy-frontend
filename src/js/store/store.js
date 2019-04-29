@@ -6,47 +6,44 @@ const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			cart: [
-				{
-					id: 0,
-					productName: "Hardcover – Box set, November ",
-					productName2: "Hardcover – Box set ",
-					productDescription: "Game of Thrones Box set",
-					price: 180.0,
-					quantity: 1
-				},
-				{
-					id: 0,
-					productName: "Hardcover – Box set ",
-					productDescription: "Game of Thrones Box set",
-					price: 180,
-					img: ""
-				},
-				{
-					id: 1,
-					productName: "Paperback – Box set, November ",
-					productDescription: "Game of Thrones Box set",
-					price: 180.0,
-					quantity: 1
-				},
-				{
-					id: 1,
-					productName: "Hardcover – Box set ",
-					productDescription: "Game of Thrones Box set",
-					img: ""
-				}
+				// {
+				// 	id: 0,
+				// 	productName: "Hardcover – Box set, November ",
+				// 	productName2: "Hardcover – Box set ",
+				// 	productDescription: "Game of Thrones Box set",
+				// 	price: 180.0,
+				// 	quantity: 1
+				// }
+				// 	{
+				// 		id: 0,
+				// 		productName: "Hardcover – Box set ",
+				// 		productDescription: "Game of Thrones Box set",
+				// 		price: 180,
+				// 		img: ""
+				// 	},
+				// 	{
+				// 		id: 1,
+				// 		productName: "Paperback – Box set, November ",
+				// 		productDescription: "Game of Thrones Box set",
+				// 		price: 180.0,
+				// 		quantity: 1
+				// 	},
+				// 	{
+				// 		id: 1,
+				// 		productName: "Hardcover – Box set ",
+				// 		productDescription: "Game of Thrones Box set",
+				// 		img: ""
+				// 	}
 			],
+			blogcards: [],
 			product: [
 				{
 					productName: "Hardcover – Box set ",
 					productDescription: "Game of Thrones Box set",
-					price: 180
-				},
-				{
-					productName: "Hardcover – Box set ",
-					productDescription: "Game of Thrones Box set"
+					price: 180,
+					img: ""
 				}
 			],
-
 			blogs: [
 				{
 					title: "Featured Blog",
@@ -118,6 +115,14 @@ const getState = ({ getStore, setStore }) => {
 			increaseQty: (e, index) => {
 				const store = getStore();
 				store.cart[index].quantity = e.target.value;
+				setStore({ cart: store.cart });
+			},
+			addtocart: item => {
+				const store = getStore();
+				store.cart.push({
+					quantity: 1,
+					item: item
+				});
 				setStore({ cart: store.cart });
 			}
 		}
