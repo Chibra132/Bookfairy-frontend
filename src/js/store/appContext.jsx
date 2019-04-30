@@ -22,6 +22,7 @@ const Store = PassedComponent => {
 			// you should do your ajax requests here
 
 			fetch(
+<<<<<<< HEAD
 				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/posts",
 				{
 					headers: {
@@ -51,6 +52,9 @@ const Store = PassedComponent => {
 
 			fetch(
 				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/gallery",
+=======
+				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/posts/posts?per_page=4",
+>>>>>>> d44cbdcfff1cb65404b81a44a10e90d1f79ce2d5
 				{
 					headers: {
 						"Content-Type": "application/json",
@@ -68,6 +72,7 @@ const Store = PassedComponent => {
 					}
 
 					response.json().then(data => {
+						console.log(data);
 						let store = this.state.store;
 						store.carouselItems = data;
 						this.setState({ store });
