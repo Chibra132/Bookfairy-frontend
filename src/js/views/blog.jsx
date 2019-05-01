@@ -8,32 +8,6 @@ export class Blog extends React.Component {
 	render() {
 		return (
 			<div className="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-				<div className="col-md-6 px-0">
-					<h1 className="display-4 font-italic">
-						The return of Game of Thrones... And what we can expect
-					</h1>
-					<p className="lead my-3">
-						{
-							"As soon as 2019 began, HBO tweeted what we were all thinking: It's now officially the year that Game of Thrones comes back. The hit drama, based on George R. R. Martin's fantasy series, returns for its eighth and final season this spring—about a year and eight months after the Season 7 finale—and it'll be full of drama, action, and surprises"
-						}
-					</p>
-					<p className="lead mb-0">
-						<a href="#" className="text-white font-weight-bold">
-							{"Continue reading..."}
-						</a>
-					</p>
-				</div>
-				<img
-					className="card-img-right flex-auto d-none d-md-block d-flex pb-3 rounded-top rounded-bottom"
-					data-src="holder.js/200x250?theme=thumb"
-					alt="Thumbnail [250x250]"
-					style={{
-						width: "1250px",
-						height: "450px"
-					}}
-					src="https://wallpapercave.com/wp/wp2090856.jpg"
-					data-holder-rendered="true"
-				/>
 				<div className="row mb-2">
 					<div className="col-md-6">
 						<div className="card flex-md-row mb-4 box-shadow h-md-250">

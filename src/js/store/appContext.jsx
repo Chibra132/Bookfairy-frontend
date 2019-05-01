@@ -49,6 +49,34 @@ const Store = PassedComponent => {
 				.catch(err => {
 					alert("Fetch error: ", err);
 				});
+
+			fetch(
+				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/products",
+				{
+					headers: {
+						"Content-Type": "application/json",
+						Accept: "application/json"
+					}
+				}
+			)
+				.then(response => {
+					if (response.status !== 200) {
+						alert(
+							"A rat ate our network cables again! " +
+								response.status
+						);
+						return;
+					}
+
+					response.json().then(data => {
+						let store = this.state.store;
+						store.product = data;
+						this.setState({ store });
+					});
+				})
+				.catch(err => {
+					alert("Fetch error: ", err);
+				});
 		}
 		render() {
 			return (
