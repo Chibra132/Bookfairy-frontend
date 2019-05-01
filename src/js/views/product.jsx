@@ -91,10 +91,16 @@ export class Product extends React.Component {
 
 							<Context.Consumer>
 								{({ store, actions }) => {
-									let product =
-										store.product[
+									// let product =
+									// 	store.product[
+									// 		this.props.match.params.theid
+									// 	];
+
+									let product = store.product.find(
+										product =>
+											product.ID ==
 											this.props.match.params.theid
-										];
+									);
 
 									console.log(product);
 
@@ -105,7 +111,7 @@ export class Product extends React.Component {
 											<div className="details col-6">
 												<h3 className="product-title">
 													{" "}
-													{product.productName}
+													{product.post_title}
 												</h3>
 												<div className="rating">
 													<div className="stars">
@@ -123,12 +129,20 @@ export class Product extends React.Component {
 																marginBottom:
 																	"1rem"
 															}}>
-															Paperback from
-															$37.76
+															{"Paperback from " +
+																"$" +
+																product.acf
+																	.current_price}
 														</Button>
 														<UncontrolledCollapse toggler="#toggler">
 															<Card>
-																<img src="https://images-na.ssl-images-amazon.com/images/I/61CWamjtpTL._SY493_BO1,204,203,200_.jpg" />
+																<img
+																	src={
+																		product
+																			.acf
+																			.image
+																	}
+																/>
 
 																<p>
 																	Buy
@@ -149,19 +163,14 @@ export class Product extends React.Component {
 													</span>
 												</div>
 												<p className="product-description">
-													The George R.R. Martin Song
-													Of Ice and Fire Hardcover
-													Box Set featuring A Game of
-													Thrones, A Clash of Kings, A
-													Storm of Swords, and A Feast
-													for Crows (Amazon Exclusive)
-													(Song of Fire and Ice)
-													Hardcover – Box set,
-													November 29, 2011
+													{product.acf.text}
 												</p>
 												<h4 className="price">
 													current price:{" "}
-													<span>$180</span>
+													<span>
+														{"$" +
+															product.acf.price}
+													</span>
 												</h4>
 												<p className="vote">
 													<strong>91%</strong> of

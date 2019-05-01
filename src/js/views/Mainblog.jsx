@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Jumbotron, Container } from "reactstrap";
 import React from "react";
+import "../../styles/home.css";
 
 const MainBlog = props => {
 	return (
@@ -8,8 +9,7 @@ const MainBlog = props => {
 			fluid
 			id="jumboHome"
 			style={{
-				background:
-					"url(https://imagesvc.timeincapp.com/v3/fan/image?url=https%3A%2F%2Fwinteriscoming.net%2Ffiles%2F2015%2F07%2FRoberts-Rebellion-1.jpg&c=sc&w=850&h=560) center"
+				background: `url(${props.image}) center`
 			}}>
 			<Container fluid>
 				<h1 className="display-3">{props.title}</h1>

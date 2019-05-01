@@ -1,7 +1,7 @@
 import React from "react";
 import getState from "./store.js";
 
-export const Context = React.createContext();
+export const Context = React.createContext(null);
 
 const Store = PassedComponent => {
 	class StoreWrapper extends React.Component {
@@ -22,7 +22,7 @@ const Store = PassedComponent => {
 			// you should do your ajax requests here
 
 			fetch(
-				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/posts/posts?per_page=4",
+				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/posts",
 				{
 					headers: {
 						"Content-Type": "application/json",
@@ -40,7 +40,6 @@ const Store = PassedComponent => {
 					}
 
 					response.json().then(data => {
-						console.log(data);
 						let store = this.state.store;
 						store.blogcards = data;
 						this.setState({ store });
@@ -49,7 +48,46 @@ const Store = PassedComponent => {
 				.catch(err => {
 					alert("Fetch error: ", err);
 				});
+
+			fetch(
+<<<<<<< HEAD
+				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/products",
+=======
+				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/gallery",
+>>>>>>> d9e6380ab721084d0afff1da9ffb6a342ad93163
+				{
+					headers: {
+						"Content-Type": "application/json",
+						Accept: "application/json"
+					}
+				}
+			)
+				.then(response => {
+					if (response.status !== 200) {
+						alert(
+							"A rat ate our network cables again! " +
+								response.status
+						);
+						return;
+					}
+
+					response.json().then(data => {
+<<<<<<< HEAD
+						let store = this.state.store;
+						store.product = data;
+=======
+						console.log(data);
+						let store = this.state.store;
+						store.carouselItems = data;
+>>>>>>> d9e6380ab721084d0afff1da9ffb6a342ad93163
+						this.setState({ store });
+					});
+				})
+				.catch(err => {
+					alert("Fetch error: ", err);
+				});
 		}
+
 		render() {
 			return (
 				<Context.Provider value={this.state}>

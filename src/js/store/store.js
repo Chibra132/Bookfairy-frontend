@@ -83,6 +83,15 @@ const getState = ({ getStore, setStore }) => {
 					date: "01/10/10",
 					style: " mt-3"
 				}
+			],
+			blogcards: [],
+			carouselItems: [
+				{
+					src:
+						"https://bookstr.com/wp-content/uploads/2018/02/harryaltcoverfeature-768x432.jpg",
+					altText: "Harry Potter",
+					caption: "caption!!!"
+				}
 			]
 		},
 		actions: {
