@@ -35,7 +35,6 @@ const getState = ({ getStore, setStore }) => {
 				// 		img: ""
 				// 	}
 			],
-			blogcards: [],
 			product: [
 				{
 					productName: "Hardcover – Box set ",
