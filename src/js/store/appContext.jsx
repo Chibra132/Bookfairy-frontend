@@ -50,11 +50,8 @@ const Store = PassedComponent => {
 				});
 
 			fetch(
-<<<<<<< HEAD
 				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/products",
-=======
-				"https://bookfairy-semq.c9users.io/wp-json/sample_api/v1/gallery",
->>>>>>> d9e6380ab721084d0afff1da9ffb6a342ad93163
+
 				{
 					headers: {
 						"Content-Type": "application/json",
@@ -72,14 +69,13 @@ const Store = PassedComponent => {
 					}
 
 					response.json().then(data => {
-<<<<<<< HEAD
 						let store = this.state.store;
 						store.product = data;
-=======
+
 						console.log(data);
 						let store = this.state.store;
 						store.carouselItems = data;
->>>>>>> d9e6380ab721084d0afff1da9ffb6a342ad93163
+
 						this.setState({ store });
 					});
 				})
