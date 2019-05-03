@@ -4,10 +4,7 @@ import { UncontrolledCollapse, Button, CardBody, Card } from "reactstrap";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
 import "../../styles/product.css";
-<<<<<<< HEAD
 
-=======
->>>>>>> a4b92b9f99d8fb2f332df048e8e38a426a16b926
 // import { Popover } from "react-native-modal-popover";
 
 export class Product extends React.Component {
