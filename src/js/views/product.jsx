@@ -262,18 +262,19 @@ export class Product extends React.Component {
 														<span className="color red" />
 													</h5>
 													<div className="action">
-														<Link to="/Cart_Checkout">
+														<Link to="/cart_checkout">
 															<button
 																onClick={() => {
 																	actions.addtocart(
-																		store
-																			.product[
-																			this
-																				.props
-																				.match
-																				.params
-																				.theid
-																		]
+																		store.product.find(
+																			product =>
+																				product.ID ==
+																				this
+																					.props
+																					.match
+																					.params
+																					.theid
+																		)
 																	);
 																}}
 																className="add-to-cart btn btn-default"

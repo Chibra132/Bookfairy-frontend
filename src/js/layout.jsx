@@ -11,7 +11,6 @@ import Store from "./store/appContext.jsx";
 import { Navbar } from "./component/navbar.jsx";
 import { Footer } from "./component/footer.jsx";
 import BlogPage from "./views/blogpage.jsx";
-import Archive from "./views/archive.jsx";
 
 //create your first component
 export class Layout extends React.Component {
@@ -29,7 +28,7 @@ export class Layout extends React.Component {
 								path="/blogpage/:theid"
 								component={BlogPage}
 							/>
-							<Route path="/archive" component={Archive} />
+							{/*	<Route path="/archive" component={Blogs} /> */}
 
 							<Route
 								path="/cart_checkout"

@@ -106,8 +106,9 @@ export class Cart_Checkout extends React.Component {
 																			<small>
 																				{
 																					product
-																						.item.acf.text 
-																					
+																						.item
+																						.acf
+																						.text
 																				}
 																			</small>
 																		</h4>
@@ -118,7 +119,8 @@ export class Cart_Checkout extends React.Component {
 																				<strong>
 																					&#36;
 																					{product
-																						.item.acf
+																						.item
+																						.acf
 																						.price *
 																						this
 																							.state
