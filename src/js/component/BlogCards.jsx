@@ -15,17 +15,20 @@ import {
 } from "reactstrap";
 import "../../styles/BlogCards.css";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const BlogCard = props => {
 	return (
 		<Col xs={12} s={4} md={3}>
-			<Card className="border-bottom-0">
-				<CardImg
-					top
-					width="100%"
-					src={props.image}
-					alt="Card image cap"
-				/>
+			<Card className="border-bottom-0" id="blogcard">
+				<Link to={"/blogpage/" + props.ID}>
+					<CardImg
+						top
+						width="100%"
+						src={props.image}
+						alt="Card image cap"
+					/>
+				</Link>
 				<CardBody>
 					<CardTitle>{props.title}</CardTitle>
 					<CardText>{props.content}</CardText>
@@ -42,6 +45,7 @@ BlogCard.propTypes = {
 	image: PropTypes.string,
 	title: PropTypes.string,
 	content: PropTypes.string,
-	footer: PropTypes.string
+	footer: PropTypes.string,
+	ID: PropTypes.string
 };
 export default BlogCard;
