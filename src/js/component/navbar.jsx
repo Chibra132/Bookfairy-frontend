@@ -33,9 +33,6 @@ export class Navbar extends React.Component {
 				<Link to="/Archive">
 					<button className="btn bg-secondary">Archive</button>
 				</Link>
-				<Link to="/Archive">
-					<button className="btn btn-primary">Archive</button>
-				</Link>
 			</nav>
 		);
 	}
