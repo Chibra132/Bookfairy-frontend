@@ -198,7 +198,7 @@ export class Product extends React.Component {
 																		paperback{" "}
 																		<i className="fas fa-shopping-cart" />{" "}
 																		by{" "}
-																		<a href="http://bookfairyfrontend-marc1210.c9users.io:8080/Product/1">
+																		<a href="http://bookfairyfrontend-marc1210.c9users.io:/Product/1">
 																			Paperback
 																		</a>
 																	</p>
