@@ -42,6 +42,10 @@ export class Product extends React.Component {
 															className="tab-pane active"
 															id="pic-1">
 															<img
+																style={{
+																	objectFit:
+																		"contain"
+																}}
 																src={
 																	this.state
 																		.mainPic ===
