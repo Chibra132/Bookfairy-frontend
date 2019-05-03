@@ -36,6 +36,7 @@ const Home = props => {
 										title={blog.post_title}
 										content={blog.post_content.slice(0, 50)}
 										footer={blog.post_date}
+										ID={blog.ID}
 									/>
 								);
 							})}
