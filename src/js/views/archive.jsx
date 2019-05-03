@@ -15,6 +15,7 @@ export default class Archive extends React.Component {
 								return (
 									<ArchiveItem
 										key={archive.ID}
+										ID={archive.ID}
 										title={archive.post_title}
 									/>
 								);
