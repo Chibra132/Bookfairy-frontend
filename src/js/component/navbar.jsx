@@ -24,10 +24,10 @@ export class Navbar extends React.Component {
 					</button>
 				</Link>
 
-				<Link to="/Product/0">
+				<Link to="/Product/68">
 					<button className="btn bg-secondary">Merch</button>
 				</Link>
-				<Link to="/Blog/1">
+				<Link to="/blog/">
 					<button className="btn bg-secondary">Read about me</button>
 				</Link>
 				<Link to="/Archive">
