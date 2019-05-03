@@ -1,5 +1,4 @@
 import React from "react";
-import "../../styles/home.css";
 import { Jumbotron, Container } from "reactstrap";
 import BlogCard from "../component/BlogCards.jsx";
 import { Context } from "../store/appContext.jsx";

@@ -46,6 +46,6 @@ BlogCard.propTypes = {
 	title: PropTypes.string,
 	content: PropTypes.string,
 	footer: PropTypes.string,
-	ID: PropTypes.string
+	ID: PropTypes.number
 };
 export default BlogCard;
