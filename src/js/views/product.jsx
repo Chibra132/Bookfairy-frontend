@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { UncontrolledCollapse, Button, CardBody, Card } from "reactstrap";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
+import "../../styles/product.css";
 // import { Popover } from "react-native-modal-popover";
 
 export class Product extends React.Component {
@@ -42,6 +43,10 @@ export class Product extends React.Component {
 															className="tab-pane active"
 															id="pic-1">
 															<img
+																style={{
+																	objectFit:
+																		"contain"
+																}}
 																src={
 																	this.state
 																		.mainPic ===
@@ -66,7 +71,7 @@ export class Product extends React.Component {
 																				mainPic:
 																					product
 																						.acf
-																						.image
+																						.smallpic
 																			}
 																		)
 																	}>
@@ -74,7 +79,7 @@ export class Product extends React.Component {
 																		src={
 																			product
 																				.acf
-																				.image
+																				.smallpic
 																		}
 																	/>
 																</button>
@@ -92,7 +97,13 @@ export class Product extends React.Component {
 																		)
 																	}>
 																	<div className="imgContainer" />
-																	<img src="https://images-na.ssl-images-amazon.com/images/I/91hA29YrnKL._AC_SX75_CR,0,0,75,75_.jpg" />
+																	<img
+																		src={
+																			product
+																				.acf
+																				.smallpictwo
+																		}
+																	/>
 																</button>
 															</li>
 														</ul>
@@ -108,7 +119,13 @@ export class Product extends React.Component {
 																		)
 																	}>
 																	<div className="imgContainer" />
-																	<img src="https://images-na.ssl-images-amazon.com/images/I/91sgJoJ43iL._AC_SX75_CR,0,0,75,75_.jpg" />
+																	<img
+																		src={
+																			product
+																				.acf
+																				.smallpicthree
+																		}
+																	/>
 																</button>
 															</li>
 														</ul>
@@ -124,7 +141,13 @@ export class Product extends React.Component {
 																		)
 																	}>
 																	<div className="imgContainer" />
-																	<img src="https://images-na.ssl-images-amazon.com/images/I/91ANAInsaSL._AC_SX75_CR,0,0,75,75_.jpg" />
+																	<img
+																		src={
+																			product
+																				.acf
+																				.smallpicfour
+																		}
+																	/>
 																</button>
 															</li>
 														</ul>
