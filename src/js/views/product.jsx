@@ -16,7 +16,7 @@ export class Product extends React.Component {
 
 	render() {
 		return (
-			<div className="container">
+			<div className="container details-col-6" d>
 				<div className="card">
 					<div className="container-fluid">
 						<div className="row">
@@ -37,11 +37,9 @@ export class Product extends React.Component {
 									} else {
 										return (
 											<div className="details-col-6">
-												<div className="preview">
-													<div className="preview-pic tab-content">
-														<div
-															className="tab-pane active"
-															id="pic-1">
+												<div className="preview ">
+													<div className="preview-pic">
+														<div className="tab-pane active">
 															<img
 																style={{
 																	objectFit:

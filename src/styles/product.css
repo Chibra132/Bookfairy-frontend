@@ -1,5 +1,11 @@
 
-
+.img {
+    display:inline-block;
+    margin:5px 20px;
+    padding:5px;
+    
+    border:1px solid #CCC;
+}
 
 
 .style {
