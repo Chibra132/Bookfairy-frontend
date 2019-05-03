@@ -4,6 +4,7 @@ import { UncontrolledCollapse, Button, CardBody, Card } from "reactstrap";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
 import "../../styles/product.css";
+
 // import { Popover } from "react-native-modal-popover";
 
 export class Product extends React.Component {
@@ -36,7 +37,9 @@ export class Product extends React.Component {
 										return <h1>Product Coming soon</h1>;
 									} else {
 										return (
-											<div className="details-col-6">
+											<div
+												className="details-col-6"
+												id="image">
 												<div className="preview">
 													<div className="preview-pic tab-content">
 														<div
@@ -153,11 +156,12 @@ export class Product extends React.Component {
 														</ul>
 													</div>
 												</div>
+
 												<div className="details col-6">
-													<h3 className="product-title">
+													<div className="product-title">
 														{" "}
 														{product.post_title}
-													</h3>
+													</div>
 													<div className="rating">
 														<div className="stars">
 															<span className="fa fa-star checked" />
@@ -208,7 +212,7 @@ export class Product extends React.Component {
 														</span>
 													</div>
 													<p className="product-description">
-														{"$" + product.acf.text}
+														{product.acf.text}
 													</p>
 													<h4 className="price">
 														current price:{" "}
@@ -275,12 +279,6 @@ export class Product extends React.Component {
 																className="add-to-cart btn btn-default"
 																type="button">
 																add to cart
-															</button>
-
-															<button
-																className="like btn btn-default"
-																type="button">
-																<span className="far fa-heart" />
 															</button>
 														</Link>
 													</div>
