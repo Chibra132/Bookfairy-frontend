@@ -30,7 +30,7 @@ export class Navbar extends React.Component {
 				<Link to="/blog/">
 					<button className="btn bg-secondary">Read about me</button>
 				</Link>
-				<Link to="/Archive">
+				<Link to="/archive">
 					<button className="btn bg-secondary">Archive</button>
 				</Link>
 			</nav>
