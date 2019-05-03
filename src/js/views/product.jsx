@@ -37,7 +37,9 @@ export class Product extends React.Component {
 										return <h1>Product Coming soon</h1>;
 									} else {
 										return (
-											<div className="details-col-6">
+											<div
+												className="details-col-6"
+												id="image">
 												<div className="preview">
 													<div className="preview-pic tab-content">
 														<div
@@ -154,11 +156,12 @@ export class Product extends React.Component {
 														</ul>
 													</div>
 												</div>
+
 												<div className="details col-6">
-													<h3 className="product-title">
+													<div className="product-title">
 														{" "}
 														{product.post_title}
-													</h3>
+													</div>
 													<div className="rating">
 														<div className="stars">
 															<span className="fa fa-star checked" />
