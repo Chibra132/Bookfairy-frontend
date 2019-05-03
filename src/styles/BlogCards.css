@@ -1,3 +1,4 @@
-#blogCardRow {
-    
+#blogcard {
+    background-size: cover !important;
+    padding: 0;
 }
