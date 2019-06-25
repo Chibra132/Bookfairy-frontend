@@ -11,6 +11,7 @@ import Store from "./store/appContext.jsx";
 import { Navbar } from "./component/navbar.jsx";
 import { Footer } from "./component/footer.jsx";
 import BlogPage from "./views/blogpage.jsx";
+import Login from "./views/Login.jsx";
 
 //create your first component
 export class Layout extends React.Component {
